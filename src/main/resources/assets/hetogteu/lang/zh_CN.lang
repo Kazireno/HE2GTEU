@@ -1,0 +1,74 @@
+tile.hetoeu_ulv_1a.name=HE->EU 转换器(ULV 1A)
+tile.hetoeu_ulv_4a.name=HE->EU 转换器(ULV 4A)
+tile.hetoeu_ulv_16a.name=HE->EU 转换器(ULV 16A)
+tile.hetoeu_ulv_64a.name=HE->EU 转换器(ULV 64A)
+
+tile.hetoeu_lv_1a.name=HE->EU 转换器(LV 1A)
+tile.hetoeu_lv_4a.name=HE->EU 转换器(LV 4A)
+tile.hetoeu_lv_16a.name=HE->EU 转换器(LV 16A)
+tile.hetoeu_lv_64a.name=HE->EU 转换器(LV 64A)
+
+tile.hetoeu_mv_1a.name=HE->EU 转换器(MV 1A)
+tile.hetoeu_mv_4a.name=HE->EU 转换器(MV 4A)
+tile.hetoeu_mv_16a.name=HE->EU 转换器(MV 16A)
+tile.hetoeu_mv_64a.name=HE->EU 转换器(MV 64A)
+
+tile.hetoeu_hv_1a.name=HE->EU 转换器(HV 1A)
+tile.hetoeu_hv_4a.name=HE->EU 转换器(HV 4A)
+tile.hetoeu_hv_16a.name=HE->EU 转换器(HV 16A)
+tile.hetoeu_hv_64a.name=HE->EU 转换器(HV 64A)
+
+tile.hetoeu_ev_1a.name=HE->EU 转换器(EV 1A)
+tile.hetoeu_ev_4a.name=HE->EU 转换器(EV 4A)
+tile.hetoeu_ev_16a.name=HE->EU 转换器(EV 16A)
+tile.hetoeu_ev_64a.name=HE->EU 转换器(EV 64A)
+
+tile.hetoeu_iv_1a.name=HE->EU 转换器(IV 1A)
+tile.hetoeu_iv_4a.name=HE->EU 转换器(IV 4A)
+tile.hetoeu_iv_16a.name=HE->EU 转换器(IV 16A)
+tile.hetoeu_iv_64a.name=HE->EU 转换器(IV 64A)
+
+tile.hetoeu_luv_1a.name=HE->EU 转换器(LuV 1A)
+tile.hetoeu_luv_4a.name=HE->EU 转换器(LuV 4A)
+tile.hetoeu_luv_16a.name=HE->EU 转换器(LuV 16A)
+tile.hetoeu_luv_64a.name=HE->EU 转换器(LuV 64A)
+
+tile.hetoeu_zpm_1a.name=HE->EU 转换器(ZPM 1A)
+tile.hetoeu_zpm_4a.name=HE->EU 转换器(ZPM 4A)
+tile.hetoeu_zpm_16a.name=HE->EU 转换器(ZPM 16A)
+tile.hetoeu_zpm_64a.name=HE->EU 转换器(ZPM 64A)
+
+tile.hetoeu_uv_1a.name=HE->EU 转换器(UV 1A)
+tile.hetoeu_uv_4a.name=HE->EU 转换器(UV 4A)
+tile.hetoeu_uv_16a.name=HE->EU 转换器(UV 16A)
+tile.hetoeu_uv_64a.name=HE->EU 转换器(UV 64A)
+
+tile.hetoeu_uhv_1a.name=HE->EU 转换器(UHV 1A)
+tile.hetoeu_uhv_4a.name=HE->EU 转换器(UHV 4A)
+tile.hetoeu_uhv_16a.name=HE->EU 转换器(UHV 16A)
+tile.hetoeu_uhv_64a.name=HE->EU 转换器(UHV 64A)
+
+tile.hetoeu_uev_1a.name=HE->EU 转换器(UEV 1A)
+tile.hetoeu_uev_4a.name=HE->EU 转换器(UEV 4A)
+tile.hetoeu_uev_16a.name=HE->EU 转换器(UEV 16A)
+tile.hetoeu_uev_64a.name=HE->EU 转换器(UEV 64A)
+
+tile.hetoeu_uiv_1a.name=HE->EU 转换器(UIV 1A)
+tile.hetoeu_uiv_4a.name=HE->EU 转换器(UIV 4A)
+tile.hetoeu_uiv_16a.name=HE->EU 转换器(UIV 16A)
+tile.hetoeu_uiv_64a.name=HE->EU 转换器(UIV 64A)
+
+tile.hetoeu_umv_1a.name=HE->EU 转换器(UMV 1A)
+tile.hetoeu_umv_4a.name=HE->EU 转换器(UMV 4A)
+tile.hetoeu_umv_16a.name=HE->EU 转换器(UMV 16A)
+tile.hetoeu_umv_64a.name=HE->EU 转换器(UMV 64A)
+
+tile.hetoeu_uxv_1a.name=HE->EU 转换器(UXV 1A)
+tile.hetoeu_uxv_4a.name=HE->EU 转换器(UXV 4A)
+tile.hetoeu_uxv_16a.name=HE->EU 转换器(UXV 16A)
+tile.hetoeu_uxv_64a.name=HE->EU 转换器(UXV 64A)
+
+tile.hetoeu_max_1a.name=HE->EU 转换器(MAX 1A)
+tile.hetoeu_max_4a.name=HE->EU 转换器(MAX 4A)
+tile.hetoeu_max_16a.name=HE->EU 转换器(MAX 16A)
+tile.hetoeu_max_64a.name=HE->EU 转换器(MAX 64A)

@@ -1,0 +1,21 @@
+{
+	"modListVersion": 2,
+	"modList": [{
+		"modid": "${modId}",
+		"name": "${modName}",
+		"description": "将来自HBM的能源接入格雷5的能源网络中！",
+		"version": "0.0.1",
+		"mcversion": "${minecraftVersion}",
+		"url": "",
+		"updateUrl": "",
+		"authorList": ["Kazireno"],
+		"credits": "",
+		"logoFile": "",
+		"screenshots": [],
+		"parent": "",
+		"requiredMods": [],
+		"dependencies": ["hbm","gregtech"],
+		"dependants": [],
+		"useDependencyInformation": false
+	}]
+}

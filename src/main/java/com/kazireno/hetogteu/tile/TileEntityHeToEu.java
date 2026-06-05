@@ -1,11 +1,5 @@
 package com.kazireno.hetogteu.tile;
 
-import gregtech.api.interfaces.tileentity.IBasicEnergyContainer;
-import gregtech.api.interfaces.tileentity.IEnergyConnected;
-import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
-import gregtech.api.util.GTUtility;
-import gregtech.common.data.GTBlockEventTracker;
-import io.netty.buffer.ByteBuf;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.nbt.NBTTagCompound;
@@ -16,12 +10,18 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.util.ForgeDirection;
+import net.minecraftforge.fluids.IFluidHandler;
 
 import api.hbm.energymk2.IEnergyReceiverMK2;
 import gregtech.api.enums.GTValues;
-import net.minecraftforge.fluids.IFluidHandler;
+import gregtech.api.interfaces.tileentity.IBasicEnergyContainer;
+import gregtech.api.interfaces.tileentity.IEnergyConnected;
+import gregtech.api.interfaces.tileentity.IGregTechTileEntity;
+import gregtech.api.util.GTUtility;
+import gregtech.common.data.GTBlockEventTracker;
+import io.netty.buffer.ByteBuf;
 
-public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 , IBasicEnergyContainer {
+public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2, IBasicEnergyContainer {
 
     // <---------------GT5 EU--------------->
     public int tier; // 电压等级
@@ -32,7 +32,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
     public long euMaxStore() {
         return GTValues.V[tier] * 20L * 30L;
     } // 提供30秒的输出缓存
-    // <---------------HBM HE--------------->
+      // <---------------HBM HE--------------->
 
     public long heStored; // 储存的HE
     public long _heCost = 0;
@@ -71,8 +71,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         this.amperage = Amperage;
     }
 
-    public TileEntityHeToEu() {
-    }
+    public TileEntityHeToEu() {}
 
     @Override
     public long getPower() {
@@ -285,15 +284,13 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getTileEntity(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
     public IInventory getIInventory(int aX, int aY, int aZ) {
         TileEntity te = this.worldObj.getTileEntity(aX, aY, aZ);
-        if (!(te instanceof IInventory))
-            return null;
+        if (!(te instanceof IInventory)) return null;
 
         return (IInventory) te;
     }
@@ -313,15 +310,13 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getIInventory(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
     public IFluidHandler getITankContainer(int aX, int aY, int aZ) {
         TileEntity te = this.worldObj.getTileEntity(aX, aY, aZ);
-        if (!(te instanceof IFluidHandler))
-            return null;
+        if (!(te instanceof IFluidHandler)) return null;
 
         return (IFluidHandler) te;
     }
@@ -341,24 +336,20 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getITankContainer(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
     public IGregTechTileEntity getIGregTechTileEntity(int aX, int aY, int aZ) {
         TileEntity te = this.worldObj.getTileEntity(aX, aY, aZ);
-        if (!(te instanceof IGregTechTileEntity))
-            return null;
+        if (!(te instanceof IGregTechTileEntity)) return null;
 
         return (IGregTechTileEntity) te;
     }
 
     @Override
     public IGregTechTileEntity getIGregTechTileEntityOffset(int aX, int aY, int aZ) {
-        return this.getIGregTechTileEntity(
-            this.xCoord + aX, this.yCoord + aY, this.zCoord + aZ
-        );
+        return this.getIGregTechTileEntity(this.xCoord + aX, this.yCoord + aY, this.zCoord + aZ);
     }
 
     @Override
@@ -371,8 +362,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getIGregTechTileEntity(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
@@ -395,8 +385,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getBlock(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
@@ -419,8 +408,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getMetaID(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
@@ -443,8 +431,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getLightLevel(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
@@ -467,8 +454,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getOpacity(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override
@@ -511,8 +497,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2 ,
         return this.getAir(
             this.getOffsetX(side, aDistance),
             this.getOffsetY(side, aDistance),
-            this.getOffsetZ(side, aDistance)
-        );
+            this.getOffsetZ(side, aDistance));
     }
 
     @Override

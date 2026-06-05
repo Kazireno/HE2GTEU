@@ -6,7 +6,7 @@
 		"description": "将来自HBM的能源接入格雷5的能源网络中！",
 		"version": "0.0.1",
 		"mcversion": "${minecraftVersion}",
-		"url": "",
+		"url": "https://github.com/Kazireno/HE2GTEU",
 		"updateUrl": "",
 		"authorList": ["Kazireno"],
 		"credits": "",

@@ -3,9 +3,6 @@ package com.kazireno.hetogteu.block;
 import com.hbm.blocks.ILookOverlay;
 import com.hbm.util.i18n.I18nUtil;
 import com.kazireno.hetogteu.tile.TileEntityHeToEu;
-import gregtech.api.enums.Textures;
-import gregtech.api.interfaces.IBlockWithTextures;
-import gregtech.api.interfaces.ITexture;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,12 +10,11 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockHeToEu extends BlockContainer implements ILookOverlay , IBlockWithTextures {
+public class BlockHeToEu extends BlockContainer implements ILookOverlay  {
 
     int _tier;
     long _amperage;
@@ -50,15 +46,5 @@ public class BlockHeToEu extends BlockContainer implements ILookOverlay , IBlock
                 + " (" + TileEntityHeToEu.GetVString(converter.tier) + " " + converter.amperage + "A)");
             ILookOverlay.printGeneric(event, I18nUtil.resolveKey(this.getUnlocalizedName() + ".name", new Object[0]), 16776960, 4210688, text);
         }
-    }
-
-    @Override
-    public @Nullable ITexture[][] getTextures(int metadata) {
-        ITexture[][] out = new ITexture[6][];
-
-        for (int i = 0; i < 6; i++) {
-            out[i] = new ITexture[] { Textures.BlockIcons.MACHINE_CASINGS[_tier][_tier],Textures.BlockIcons.MACHINE_CASINGS[_tier][_tier] };
-        }
-        return out;
     }
 }

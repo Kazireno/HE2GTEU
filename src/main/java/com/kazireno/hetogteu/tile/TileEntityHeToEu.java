@@ -367,7 +367,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2, 
 
     @Override
     public Block getBlock(int aX, int aY, int aZ) {
-        return this.worldObj.getBlock(aY, aZ, aZ);
+        return this.worldObj.getBlock(aX, aY, aZ);
     }
 
     @Override

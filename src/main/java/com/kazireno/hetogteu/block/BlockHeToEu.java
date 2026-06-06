@@ -2,23 +2,36 @@ package com.kazireno.hetogteu.block;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.LongStream;
 
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 
 import com.hbm.blocks.ILookOverlay;
 import com.hbm.util.i18n.I18nUtil;
+import com.kazireno.hetogteu.HEtoGTEU;
 import com.kazireno.hetogteu.tile.TileEntityHeToEu;
 
 public class BlockHeToEu extends BlockContainer implements ILookOverlay {
 
     int _tier;
     long _amperage;
+
+    // 方向
+    public static final int META_SOUTH = 0;
+    public static final int META_WEST = 1;
+    public static final int META_NORTH = 2;
+    public static final int META_EAST = 3;
+
+    // 纹理
+    private IIcon sideIcon;
+    private IIcon frontIcon;
 
     public BlockHeToEu(final int tier, final long amperage) {
         super(Material.iron);
@@ -30,7 +43,7 @@ public class BlockHeToEu extends BlockContainer implements ILookOverlay {
         this.setBlockName(
             "hetoeu_" + TileEntityHeToEu.GetVString(_tier)
                 .toLowerCase() + "_" + _amperage + "a");
-        this.setBlockTextureName("");
+        this.setBlockTextureName(HEtoGTEU.MODID + ":Converter_pale_" + String.format("%02d", _tier));
     }
 
     @Override
@@ -70,5 +83,10 @@ public class BlockHeToEu extends BlockContainer implements ILookOverlay {
                 4210688,
                 text);
         }
+    }
+
+    public long[] getInfo() {
+        return LongStream.of(this._tier, this._amperage)
+            .toArray();
     }
 }

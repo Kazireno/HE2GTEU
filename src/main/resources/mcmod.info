@@ -4,7 +4,7 @@
 		"modid": "${modId}",
 		"name": "${modName}",
 		"description": "将来自HBM的能源接入格雷5的能源网络中！",
-		"version": "0.0.1",
+		"version": "0.0.2",
 		"mcversion": "${minecraftVersion}",
 		"url": "https://github.com/Kazireno/HE2GTEU",
 		"updateUrl": "",

@@ -105,6 +105,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2, 
 
         if (euStored > GTValues.V[tier] * amperage) {
             euStored -= IEnergyConnected.Util.emitEnergyToNetwork(GTValues.V[tier], amperage, this) * GTValues.V[tier];
+            this.markDirty();
         }
 
         _heCost = 0;
@@ -117,6 +118,7 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2, 
                 euStored += _euGet;
             }
             ticker = 0;
+            this.markDirty();
         }
 
         for (ForgeDirection dir : ForgeDirection.VALID_DIRECTIONS) {
@@ -126,10 +128,12 @@ public class TileEntityHeToEu extends TileEntity implements IEnergyReceiverMK2, 
                 this.yCoord + dir.offsetY,
                 this.zCoord + dir.offsetZ,
                 dir);
+            this.markDirty();
         }
         worldObj.markBlockForUpdate(xCoord, yCoord, zCoord);
         ticker++;
-        this.markDirty();
+
+        if (this.ticker >= 1000) ticker = 0;
     }
 
     //

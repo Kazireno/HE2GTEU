@@ -8,5 +8,4 @@ import org.apache.logging.log4j.Logger;
 public class HeToGteu {
 
     public static final String MODID = "hetogteu";
-    public static final Logger LOG = LogManager.getLogger(MODID);
 }

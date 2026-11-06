@@ -1,15 +1,17 @@
 package com.kazireno.hetogteu;
 
-import com.gtnewhorizon.gtnhmixins.ILateMixinLoader;
-import com.gtnewhorizon.gtnhmixins.LateMixin;
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
+import org.jetbrains.annotations.NotNull;
+
+import com.gtnewhorizon.gtnhmixins.ILateMixinLoader;
+import com.gtnewhorizon.gtnhmixins.LateMixin;
+
 @LateMixin
 public class LateMixins implements ILateMixinLoader {
+
     @Override
     public String getMixinConfig() {
         return "mixins.hetogteu.late.json";

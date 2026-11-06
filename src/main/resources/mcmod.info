@@ -14,7 +14,7 @@
 		"screenshots": [],
 		"parent": "",
 		"requiredMods": ["hbm","gregtech"],
-		"dependencies": [],
+		"dependencies": ["hbm","gregtech"],
 		"dependants": [],
 		"useDependencyInformation": false
 	}]

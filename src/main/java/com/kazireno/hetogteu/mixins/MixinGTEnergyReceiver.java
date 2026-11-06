@@ -1,38 +1,49 @@
 package com.kazireno.hetogteu.mixins;
 
-import api.hbm.energymk2.IEnergyReceiverMK2;
-import com.kazireno.hetogteu.powernets.HBMEnergyAdapter;
-import gregtech.api.metatileentity.BaseMetaTileEntity;
-import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.Implements;
+import org.spongepowered.asm.mixin.Interface;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import com.kazireno.hetogteu.powernets.HBMEnergyAdapter;
+
+import api.hbm.energymk2.IEnergyReceiverMK2;
+import gregtech.api.metatileentity.BaseMetaTileEntity;
+
 @Mixin(value = BaseMetaTileEntity.class, remap = false)
-@Implements(@Interface(
-    iface = IEnergyReceiverMK2.class,
-    prefix = "hbm$",
-    remap = Interface.Remap.NONE
-))
+@Implements(@Interface(iface = IEnergyReceiverMK2.class, prefix = "hbm$", remap = Interface.Remap.NONE))
 public abstract class MixinGTEnergyReceiver {
 
-    @Shadow(remap = false) public abstract long getStoredEU();
-    @Shadow(remap = false) public abstract long getEUCapacity();
-    @Shadow(remap = false) public abstract boolean setStoredEU(long aEnergy);
-    @Shadow(remap = false) public abstract boolean isEnetInput();
-    @Shadow(remap = false) public abstract boolean isEnetOutput();
+    @Shadow(remap = false)
+    public abstract long getStoredEU();
 
+    @Shadow(remap = false)
+    public abstract long getEUCapacity();
 
-    //在GT机器中维护一个HBM网络节点实例
-    @Unique private HBMEnergyAdapter hetogteu$hbmAdapter;
+    @Shadow(remap = false)
+    public abstract boolean setStoredEU(long aEnergy);
 
-    //构造函数初始化
+    @Shadow(remap = false)
+    public abstract boolean isEnetInput();
+
+    @Shadow(remap = false)
+    public abstract boolean isEnetOutput();
+
+    // 在GT机器中维护一个HBM网络节点实例
+    @Unique
+    private HBMEnergyAdapter hetogteu$hbmAdapter;
+
+    // 构造函数初始化
     @Inject(method = "<init>*", at = @At("TAIL"))
     private void hetogteu$init(CallbackInfo ci) {
-        this.hetogteu$hbmAdapter = new HBMEnergyAdapter((BaseMetaTileEntity)(Object)this);
+        this.hetogteu$hbmAdapter = new HBMEnergyAdapter((BaseMetaTileEntity) (Object) this);
     }
 
-    //每tick驱动适配器
+    // 每tick驱动适配器
     @Inject(method = "updateEntityProfiled", at = @At("TAIL"))
     private void hetogteu$tick(CallbackInfo ci) {
         if (hetogteu$hbmAdapter != null) hetogteu$hbmAdapter.tick();
@@ -45,7 +56,7 @@ public abstract class MixinGTEnergyReceiver {
         long cap = this.getEUCapacity();
         if (eu > cap) eu = cap;
         this.setStoredEU(eu);
-        System.out.println("this.set:"+eu);
+        System.out.println("this.set:" + eu);
     }
 
     @Unique

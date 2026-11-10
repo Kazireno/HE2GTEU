@@ -4,7 +4,7 @@
 		"modid": "${modId}",
 		"name": "${modName}",
 		"description": "A Mod Allow Gt Machine use HBM's energy",
-		"version": "0.1.0",
+		"version": "0.1.1",
 		"mcversion": "${minecraftVersion}",
 		"url": "https://github.com/Kazireno/HE2GTEU",
 		"updateUrl": "",

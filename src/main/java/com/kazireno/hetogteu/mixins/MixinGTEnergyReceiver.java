@@ -1,10 +1,6 @@
 package com.kazireno.hetogteu.mixins;
 
-import org.spongepowered.asm.mixin.Implements;
-import org.spongepowered.asm.mixin.Interface;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
+import org.spongepowered.asm.mixin.*;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -38,13 +34,13 @@ public abstract class MixinGTEnergyReceiver {
     private HBMEnergyAdapter hetogteu$hbmAdapter;
 
     // 构造函数初始化
-    @Inject(method = "<init>*", at = @At("TAIL"))
+    @Inject(method = "<init>*", at = @At("TAIL"), require = 0)
     private void hetogteu$init(CallbackInfo ci) {
         this.hetogteu$hbmAdapter = new HBMEnergyAdapter((BaseMetaTileEntity) (Object) this);
     }
 
     // 每tick驱动适配器
-    @Inject(method = "updateEntityProfiled", at = @At("TAIL"))
+    @Inject(method = "updateEntityProfiled", at = @At("TAIL"), require = 0)
     private void hetogteu$tick(CallbackInfo ci) {
         if (hetogteu$hbmAdapter != null) hetogteu$hbmAdapter.tick();
     }
@@ -56,7 +52,6 @@ public abstract class MixinGTEnergyReceiver {
         long cap = this.getEUCapacity();
         if (eu > cap) eu = cap;
         this.setStoredEU(eu);
-        System.out.println("this.set:" + eu);
     }
 
     @Unique

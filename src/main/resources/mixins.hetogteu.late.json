@@ -1,5 +1,5 @@
 {
-  "required": false,
+  "required": true,
   "minVersion": "0.8.5-GTNH",
   "package": "com.kazireno.hetogteu.mixins",
   "refmap": "mixins.hetogteu.late.refmap.json",
@@ -7,6 +7,8 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "MixinGTEnergyReceiver",
-    "MixinHBMMissileAntiBallisticChanges"
+    "MixinHBMMissileAntiBallisticChanges",
+    "MixinHBMTankReceiver",
+    "MixinHBMProxyFluidHandler"
   ]
 }

@@ -1,6 +1,6 @@
 dependencies {
     //runtimeOnlyNonPublishable("com.github.GTNewHorizons:NotEnoughItems:2.7.69-GTNH:dev")
-    def ntmBuildNumber = "5863" // Change this value according to the release you wish to use
+    def ntmBuildNumber = "5863"       //HBM版本
 
     implementation "com.hbm:HBM-NTM:1.0.27_X${ntmBuildNumber}:dev"
     compileOnly "com.hbm:HBM-NTM:1.0.27_X${ntmBuildNumber}:src"

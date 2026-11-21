@@ -1,6 +1,6 @@
 package com.kazireno.hetogteu;
 
-import java.util.Collections;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -19,6 +19,12 @@ public class LateMixins implements ILateMixinLoader {
 
     @Override
     public @NotNull List<String> getMixins(Set<String> loadedMods) {
-        return Collections.singletonList("MixinGTEnergyReceiver");
+        // List<String> lateMixin = new ArrayList<>();
+        // lateMixin.add("MixinGTEnergyReceiver");
+        // lateMixin.add("MixinHBMTankReceiver");
+        // lateMixin.add("MixinHBMProxyFluidHandler");
+        // return lateMixin;
+
+        return new ArrayList<>();
     }
 }

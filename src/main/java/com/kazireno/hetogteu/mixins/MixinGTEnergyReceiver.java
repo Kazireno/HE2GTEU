@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import com.kazireno.hetogteu.powernets.HBMEnergyAdapter;
+import com.kazireno.hetogteu.utils.HBMEnergyAdapter;
 
 import api.hbm.energymk2.IEnergyReceiverMK2;
 import gregtech.api.metatileentity.BaseMetaTileEntity;

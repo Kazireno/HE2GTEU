@@ -121,6 +121,7 @@ public abstract class MixinHBMMissileAntiBallisticChanges extends Entity {
 
             // 重置生命周期
             fallingBlock.field_145812_b = 1;
+            fallingBlock.field_145813_c = false;
 
             world.spawnEntityInWorld(fallingBlock);
         }

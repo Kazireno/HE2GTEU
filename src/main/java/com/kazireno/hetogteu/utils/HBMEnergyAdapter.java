@@ -1,4 +1,4 @@
-package com.kazireno.hetogteu.powernets;
+package com.kazireno.hetogteu.utils;
 
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.common.util.ForgeDirection;
